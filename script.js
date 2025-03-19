@@ -1,5 +1,14 @@
 function indexOfIgnoreCase(s1, s2) {
-  // write your code here
+    // Handle edge cases
+    if (!s2) return 0; // Empty subStr should return 0
+    if (!s1) return -1; // Empty main string but non-empty subStr returns -1
+
+    // Convert both strings to lowercase for case-insensitive comparison
+    const lowerS1 = s1.toLowerCase();
+    const lowerS2 = s2.toLowerCase();
+
+    // Use indexOf to find the first occurrence
+    return lowerS1.indexOf(lowerS2);
 }
 
 // Please do not change the code below
